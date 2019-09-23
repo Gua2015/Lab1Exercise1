@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_Bill"
+        android:layout_width="71dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="75dp"
+        android:background="@color/lightGray"
+        android:text="Bill"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/lightGray"
+        android:text="Tip (%)"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Bill" />
+
+    <EditText
+        android:id="@+id/et_Bill_Amount"
+        android:layout_width="247dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="71dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Enter Bill"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_Bill"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_Enter_Tip"
+        android:layout_width="242dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Enter Tip %"
+        android:inputType="textPersonName"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_Tip"
+        app:layout_constraintTop_toBottomOf="@+id/et_Bill_Amount" />
+
+    <!-- Red Line -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="5dip"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="82dp"
+        android:background="#FF00"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Tip_Label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Enter_Tip" />
+
+    <TextView
+        android:id="@+id/tv_Tip_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/lightGray"
+        android:text="Tip ($)"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+    <TextView
+        android:id="@+id/tv_Label_Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/lightGray"
+        android:text="Total"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Tip_Label" />
+
+    <TextView
+        android:id="@+id/tv_Tip_Total"
+        android:layout_width="223dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="44dp"
+        android:background="@color/lightGreen"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/tv_Bill_Total"
+        android:layout_width="222dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="44dp"
+        android:background="@color/lightGreen"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Tip_Label" />
+</androidx.constraintlayout.widget.ConstraintLayout>
